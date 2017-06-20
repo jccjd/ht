@@ -1,0 +1,279 @@
+<!doctype html>
+<html >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css/style.css" rel="stylesheet">
+<link href='css/flipping_gallery.css' rel='stylesheet' type='text/css'>	
+	<script type="text/javascript" src="js/jquery.js"></script>
+ 	 <script type="text/javascript" src="js/jquery.flipping_gallery.js"></script>
+
+</head>
+<script>
+	  $(document).ready( function() {
+	    $(".gallery").flipping_gallery({
+	      enableScroll: true,
+	      autoplay: 2000
+	    });
+	    
+	    $(".next").click(function() {
+	      $(".gallery").flipForward();
+	      return false;
+	    });
+	    $(".prev").click(function() {
+	      $(".gallery").flipBackward();
+	      return false;
+	    });
+	  });
+		
+</script>
+<script type="text/javascript">
+	(function(){
+	  var animenuToggle = document.querySelector('.animenu__toggle'),
+		  animenuNav    = document.querySelector('.animenu__nav'),
+		  hasClass = function( elem, className ) {
+			return new RegExp( ' ' + className + ' ' ).test( ' ' + elem.className + ' ' );
+		  },
+		  toggleClass = function( elem, className ) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+			if( hasClass(elem, className ) ) {
+			  while( newClass.indexOf( ' ' + className + ' ' ) >= 0 ) {
+				newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+			  }
+			  elem.className = newClass.replace( /^\s+|\s+$/g, '' );
+			} else {
+			  elem.className += ' ' + className;
+			}
+		  },           
+		  animenuToggleNav =  function (){        
+			toggleClass(animenuToggle, "animenu__toggle--active");
+			toggleClass(animenuNav, "animenu__nav--open");        
+		  }
+
+	  if (!animenuToggle.addEventListener) {
+		  animenuToggle.attachEvent("onclick", animenuToggleNav);
+	  }
+	  else {
+		  animenuToggle.addEventListener('click', animenuToggleNav);
+	  }
+	})()
+</script>
+<style>
+html {
+  height: 100%;
+}
+body{
+
+	  padding: 0;
+	  /*background-image: url(img/q1.gif);*/
+	  font-family: 'open sans';
+	  position: relative;
+	  margin: 0;
+	  height: 100%;
+}
+p{
+	text-indent: 2em;
+	line-height: 30px;
+	font-family: "楷体";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.gallery {
+  width: 1000px;
+  height: 333px;
+  color: #cc0;
+  margin: 170px auto;
+
+}
+#top{
+	width: 500px;
+	height: 50px;
+	
+	}
+ #top ul{
+            display: inline;
+        }
+       #top ul li{
+            list-style: none;
+        }
+       #top ul li{
+            float: left;
+        }
+       #top ul li ul li{
+            float: none;
+        }
+        * { margin:0; padding:0;}
+       #top a { text-decoration:none;color: black;font-size:18px;font-weight: bold; font-family: "楷体";}
+       #top ul li a { width:100px; height:50px; text-align:center; line-height:40px; display:block;  }
+       #top ul li ul { position:absolute; display:none;}
+       #top ul li:hover ul{ display:block; }
+       #top ul li a:hover {
+            color: chocolate;
+        }
+        #top ul li ul li a:hover{
+        	background-image: url(images1/mo3.png);
+        }
+}
+#h2{
+	background-image: url(img/72015937_5.jpg);
+	width: 100%;
+	height: 70px;
+}
+#h3{
+	width: 1300px;
+	height: 200px;
+	
+}
+#h3 img{
+	width: 900px;
+	height: 200px;
+	float: left;
+}
+#h3 p{
+	text-indent: 2em;
+	padding: 0 1em;
+}
+
+#h4 {
+	width: 400px;
+	height: 800px;
+	margin: 20px;
+	text-align: center;
+	float: left;
+}
+#h4 img{
+	width: 350px;
+	height: 600px;
+
+}
+#h5 {
+	width: 800px;
+	height: 400px;
+	margin: 20px;
+	float: right;
+}
+#h5 img{
+	width: 500px;
+	height: 400px;
+	float: left;
+
+}
+#h6 {
+	width: 800px;
+	height: 400px;
+	margin: 20px;
+	float: right;
+	
+}
+#h6 img{
+	width: 500px;
+	height: 400px;
+	float: left;
+}
+#h7{
+	width: 900px;
+	height: 400px;	
+	margin: 0 auto;
+}
+#h7 img{
+	float: left;	
+}
+#q1{
+	width: 1600px;
+	height: 1600px;
+
+}
+</style>
+<body>
+<div style="height: 50px;width: 100%;background-color: #deb887;">
+		<div id="top">
+		    <ul>
+		        <li><a href="index.html">Home</a>
+		        </li>
+		        <li><a href="h1.html">书法</a>
+		            <ul>
+		                <li><a href="shufjs.html">书法介绍</a></li>
+		                <li><a href="index1.html">书法欣赏</a></li>
+		                
+		            </ul>
+		        </li>
+		        <li><a href="#">国画</a>
+		            <ul>
+		                <li><a href="#">1</a></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="主页.html">建筑</a>
+		            <ul>
+		                <li><a href="古代风.html">古代风</a></li>
+		                <li><a href="现代风.html">现代风</a></li>
+		                </ul>
+		        </li>
+		        <li><a href="#">衣裳</a>
+		            <ul>
+		                <li><a href="#">1</a></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</div>
+</div>
+		
+		<div style="font-family: '隶书';width: 100%;height:200px;background-color: #deb887; font-size:150px;text-align: center; background-color: ">国风</div>
+		<div style="background-color:#bdb76b;width: 100%;height: 400px;">
+			<div class="gallery">
+			  <a href="#" data-caption="wd"><img src="img/2.jpg"></a>
+			  <a href="#" data-caption="ws"><img src="img/e1.jpg"></a>
+			  <a href="#" data-caption="dwd"><img src="img/4.jpg"></a>
+			  <a href="#" data-caption="ddw"><img src="img/e2.jpg"></a>
+			  <a href="#" data-caption="bgchgcf"><img src="img/e3.jpg"></a>
+			</div>
+		</div>
+		<div style="margin-top: 60px;">
+			<div id="h3">
+				<img src="img/40657307_1.jpg">
+				<div style="width:400px ;height:00px; float:right; background-color:#;">
+				<p style=""> <a href="#" style=""> 书法</a>作为一种艺术创作，具有很深的&nbsp玄妙.从甲骨文、金文演变而为大篆、小篆、隶书，到东汉、魏、晋时期，草书、楷书、行书、诸体基本定型，书法时刻散发着古老艺术的魅力。为一代又一代人们所喜爱</p>
+				</div>
+			</div>
+			<div id="h4">
+				<img src="img/121623171400.jpg">
+				
+				<p><a href="#" style="">国画</a>是中国的传统绘画形式，是用毛笔蘸水、墨、彩作画于绢或纸上。工具和材料有毛笔、墨、国颜料、宣纸,绢等，题材可画分人物、山水、花鸟等，技法可分具象和写意。中国画在内容和艺术创作上，体现了古人对自然、社会及与之相关联的政治、哲学、宗教、道德、文艺等方面的认知。</p>
+				
+			</div>
+			<div id="h5">
+				<img src="img/timg2.jpg">
+				<div style="width:270px;height: 200px;float: right; text-align: center;background-color:#;">
+				<p>中国的古代<a href="#" style="">器具</a>，尤其是青铜器，真是多种多样，美轮美奂。那些器具优美的曲线，令人着迷的花纹，真是让人百看不厌。
+				</p>
+				</div>
+			</div>
+			<div id="h6">
+				<img src="img/timg3.jpg">
+				<div style="width:270px;height: 200px;float: right; text-align: center;background-color:#;">
+				<p>
+
+					<a href="#" style="">服装</a>穿于人体起保护和装饰作用的制品，其同义词有“衣服”和“衣裳”。中国古代称“上衣下裳”。
+					服装的效果取决于穿着对象、服装造型与穿着环境三大方面的因素。服装既作为人类文明与进步的象征，同时也是一个国家、民族文化艺术的组成部分
+				</p>
+				</div>
+			</div>
+			<div style="float: left;width: 100%;height: 500px; ">
+			<div id="h7">
+				<img src="img/tu1.jpg">
+				<div style="width:300px;height: 200px;float: right;background-color:#;">
+				<p>在世界<a href="中国风建筑--邱志远/主页.html" style="">建筑</a>体系中 ，中国古代建筑是源远流长的独立发展的体系。该体系至迟在3000多年前的殷商时期就已初步形成，其风格优雅，结构灵巧。中国古代建筑的发展大致经历了原始社会、商周、秦汉、三国两晋南北朝、隋唐五代、宋辽金元、明清7个时期。直至20世纪，始终保持着自己独特的结构和布局原则，而且传播、影响到其他国家。 </p>
+				</div>
+			</div>
+			</div>
+		</div>
+	<div style="width: 100%;height: 100px;float: left;background-image: url(img/5-120601095139-50.gif);text-align: center;line-height: 100px;"> copyright</div>
+</div>
+</body>
+</html>
